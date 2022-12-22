@@ -1,0 +1,123 @@
+/* Fonts ///////////////////////////////////// */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Lato', sans-serif; */
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.side-bar{
+    width: 350px;
+    height: 840px;
+    position: sticky;
+    padding-top: 50px;
+    box-shadow: inset -6px 9px 19px rgba(0, 0, 0, 0.25);
+
+}
+.side-bar h3{
+    font-size: 3em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px;
+}
+.side-bar p{
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.main-content{
+    width: 1100px;
+    height: 840px;
+    position: absolute;
+    top: 0px;
+    left: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-left: 20px;
+    
+}
+.profile-pic{
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin-left: 55px;
+}
+.rank{
+    width: 340px;
+    height: 200px;
+    border: 2px solid black;
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+h1{
+    font-family: 'Raleway', sans-serif;
+    opacity: 0.8;
+    font-size: 2.5em;
+
+}
+.courses{
+    
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    overflow-x: scroll;
+    
+}
+.courses div{
+    min-width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 30px 20px 0px 0px;
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+.subscription{
+    /* border: 2px solid black; */
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    overflow-x: scroll;
+
+}
+.subscription div{
+    min-width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 40px 40px 0px 0px;
+    border-radius: 100%;
+}
+.tests{
+    /* border: 2px solid black; */
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+.tests div{
+    border: 2px solid black;
+    width: 300px;
+    height: 200px;
+    margin-top: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+h3{
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    margin-top: 40px;
+
+}

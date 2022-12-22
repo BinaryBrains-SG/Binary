@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+
+    
+<!-- Bootstrap link cdn ////////////////////////////////////////////////////////// -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link rel="stylesheet" href="./media/Assets/style4.css">
+<script>
+
+
+
+</script>
+
+</head>
+<body >
+
+    <div class="community-guy">
+        <img  class="community-hands" src="./media/images/community-hands.png"   alt="">
+        <div>
+          <h2 class="sentence">With our Community you can
+            <div class="pushEffect">
+              <span>Help others.</span>
+              <span>Get your answers.</span>
+              <span>Know your concepts.</span>
+              <span>Authenticate your answer.</span>
+              <span>Solve questions.</span>
+            </div>
+          </h2>
+          <button type="button"  class="btn btn-success"><a style="color: white;text-decoration: none;background-color: green;" href="#Community">Community</a></button>
+        </div>  
+    </div>
+    
+    <div id="carouselExampleIndicators" class="carousel slide active" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+        </ol>
+        <div class="carousel-inner active">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="./media/images/carasoule1.png" alt="First slide">
+                
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./media/images/carasoule2.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./media/images/carasoule3.png" alt="Third slide">
+            </div>
+        </div>
+        
+    </div>
+    
+    <img  class="community-heart" src="./media/images/community-heart.png" alt="">
+
+    <div id="Community">
+        <form action="./search" method="post">
+            
+            <input name="keyword" type="text" placeholder="Search Keyword" >
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+        </form>
+
+        <div class="flexbox">
+            {%if list%}
+            {%for i in list %}
+            <div class="qna">
+                <div class="question ">{{i.question}}</div>
+                <div class="answer ">{{i.answers}}</div>
+
+            </div>
+            {%endfor%}
+            {%endif%}
+            {% comment %} {%else%}
+            {% endelse %} {% endcomment %}
+        </div>
+    </div>
+    
+    
+
+
+
+    <!-- JS link......................... -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="./media/Assets/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+</body>
+</html>

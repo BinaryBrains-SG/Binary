@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost:8000/media/Assets/style.css">
+    <!-- Bootstrap link cdn ////////////////////////////////////////////////////////// -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Quizzzzz'''</title>
+</head>
+<body style="background-color: aliceblue; padding-left: 200px; padding-right: 200px;">
+
+    <h1 style="margin-left: 30%;margin-top: 50px;margin-bottom: 100px;color: darkblue;  font-family: 'Raleway', sans-serif;font-size: 3em;">QUIZ 2</h1>
+   <div><h1> Q1.A and B invest in a business in the ratio 3 : 2. If 5% of the total profit goes to charity and A's share is Rs. 855, the total profit is<br></h1>
+    <input type="radio" name="question1"><p>Rs. 1425</p><br>
+    <input type="radio" name="question1" id="correct1"><p>Rs. 1500</p><br>
+    <input type="radio" name="question1" ><p>Rs. 1537.50</p><br>
+    <input type="radio" name="question1"><p>Rs. 1576</p><br>
+    </div>
+  
+    <div> <h1> Q2.The Homolographic projection has the correct representation of<br></h1>
+    <input type="radio" name="question2"><p>shape</p><br>
+    <input type="radio" name="question2" id="correct2"><p>area</p><br>
+    <input type="radio" name="question2"><p>baring</p><br>
+    <input type="radio" name="question2"><p>distance</p><br>
+    </div>
+  
+    <div> <h1>Q3.The great Victoria Desert is located in<br></h1>
+    <input type="radio" name="question3"><p>Cannada</p><br>
+    <input type="radio" name="question3"><p>West Africa</p><br>
+    <input type="radio" name="question3" id="correct3"><p>Australia</p><br>
+    <input type="radio" name="question3"><p>North America</p><br>
+    </div>
+  
+    <div><h1>Q4.Which of the following is not associated with the UNO?<br></h1>
+    <input type="radio" name="question4"><p>ILO</p><br>
+    <input type="radio" name="question4"><p>WHO</p><br>
+    <input type="radio" name="question4" id="correct4"><p>ASEAN</p><br>
+    <input type="radio" name="question4"><p>All of the above</p><br>
+    </div>
+  
+    <div><h1> Q5.The largest country of the world by geographical area is<br></h1>
+    <input type="radio" name="question5" id="correct5"><p>Russia</p><br>
+    <input type="radio" name="question5"><p>Vatican City</p><br>
+    <input type="radio" name="question5"><p>Australia</p><br>
+    <input type="radio" name="question5"><p>USA</p><br>
+    </div>
+  
+    <div><h1>Q6.A clock is started at noon. By 10 minutes past 5, the hour hand has turned through:<br></h1>
+    <input type="radio" name="question6"><p>145°</p><br>
+    <input type="radio" name="question6"><p>150°</p><br>
+    <input type="radio" name="question6" id="correct6"><p>155°</p><br>
+    <input type="radio" name="question6"><p>160°</p><br>
+    </div>
+  
+    <div><h1> Q7.A, B, C subscribe Rs. 50,000 for a business. A subscribes Rs. 4000 more than B and B Rs. 5000 more than C. Out of a total profit of Rs. 35,000, A receives:<br></h1>
+    <input type="radio" name="question7"><p>Rs. 8400</p><br>
+    <input type="radio" name="question7"><p>Rs. 11,900</p><br>
+    <input type="radio" name="question7" ><p>Rs. 13,600</p><br>
+    <input type="radio" name="question7" id="correct7"><p>Rs. 14,700</p><br>
+    </div>
+  
+    <div> <h1>Q8.Which of the following is not a chief organ of the United Nations Organisations?<br></h1>
+    <input type="radio" name="question8" id="correct8"><p>International Labour Organisation</p><br>
+    <input type="radio" name="question8"><p>Security Council</p><br>
+    <input type="radio" name="question8"><p>International Court of Justice</p><br>
+    <input type="radio" name="question8"><p>General Assembly</p><br>
+    </div>
+    <div> <h1> Q9.Which of the following class level (nonlocal) variable declarations will not compile?<br></h1>
+    <input type="radio" name="question9"><p>protected int a;</p><br>
+    <input type="radio" name="question9"><p>transient int b = 3;</p><br>
+    <input type="radio" name="question9"id="correct9"><p>private synchronized int e;</p><br>
+    <input type="radio" name="question9"><p>volatile int d;</p><br>
+    </div>
+
+    <div> <h1>Q10.Which of the following are legal lines of code?<br>
+    int w = (int)888.8;<br>
+    byte x = (byte)1000L;<br>
+    long y = (byte)100;<br>
+    byte z = (byte)100L;<br></h1>
+
+
+    <input type="radio" name="question10" ><p>1 and 2</p><br>
+    <input type="radio" name="question10"><p>2 and 3</p><br>
+    <input type="radio" name="question10"><p>3 and 4</p><br>
+    <input type="radio" name="question10"id="correct10"><p>All statements are correct.</p><br>
+
+    </div>
+
+
+<br><br>
+
+    
+    <button style="width: 200px;margin-bottom: 200px;" class="btn btn-success" type="submit" name="submit" value="submitQuiz" onclick="result()">Submit</button>
+    <script type="text/javascript">
+        function result(){
+            var score=0;
+            
+            if(document.getElementById('correct1').checked)
+            {
+                score++;
+            }if(document.getElementById('correct2').checked)
+            {
+                score++;
+            }if(document.getElementById('correct3').checked)
+            {
+                score++;
+            }if(document.getElementById('correct4').checked)
+            {
+                score++;
+            }if(document.getElementById('correct5').checked)
+            {
+                score++;
+            }if(document.getElementById('correct6').checked)
+            {
+                score++;
+            }if(document.getElementById('correct7').checked)
+            {
+                score++;
+            }if(document.getElementById('correct8').checked)
+            {
+                score++;
+            }if(document.getElementById('correct9').checked)
+            {
+                score++;
+            }if(document.getElementById('correct10').checked)
+            {
+                score++;
+            }
+        document.write("Your score is:"+score);
+        }
+
+
+
+    </script>
+</body>
+</html>

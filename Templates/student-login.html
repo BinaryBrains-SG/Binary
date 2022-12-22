@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+
+<!-- style sheey link//////////////////////////////////////////////////////// -->
+<link rel="stylesheet" href="../media/Assets/style.css">
+<!-- Bootstrap link cdn ////////////////////////////////////////////////////////// -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<script src="https://kit.fontawesome.com/3a3e121ecf.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body style="background-color: aliceblue;">
+    <img style="position: absolute; left: 10px;top: 10px;z-index: -1;" class="student-round-text" src="../media/images/student-round-text.png" alt="">
+    <img class="student-login" src="../media/images/student-login-gradient.png" alt="">
+    <div class="login-info">
+        
+        <h1>Welcome to</h1>
+        <img src="../media/images/LOGO.png" alt="">
+
+        <form action="../login" name="suForm" id="supform" enctype="multipart/form-data" method="post">
+            <p>Upload your pic</p>
+            <input type="file" name="img" >
+            <input type="text" name="name" placeholder="   Full name" id="name" onclick="resetBtn()" maxlength="30">
+            <input type="text" name="email" placeholder="   Email" id="email" onclick="resetBtn()">
+            <input type="password" name="pwd" placeholder="    🤫Password" id="pass" onclick="resetBtn()" minlength="8">
+            
+            <input class="checkbox" type="checkbox" name="check1" id="check" onclick="resetBtn()"> 
+            <label for="check" class="label">I agree to the 'Terms and policies'.</label>
+        
+            
+            <button class="btn btn-primary " type="submit" id="submit-btn" value="Sign Up" onmouseover="mouseOver()">Sign Up</button>
+        </form>
+
+    </div>
+
+<!-- JS link......................... -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script src="../media/Assets/script.js"></script>
+
+</body>
+</html>
+
+
+
+<script>
+
+    var a = 0;
+
+    function mouseOver(){
+        
+        const name = document.forms['suForm']['name'].value;
+        const email = document.forms['suForm']['email'].value;
+        const pass = document.forms['suForm']['pass'].value;
+        const tick = document.querySelector('#check');
+
+        const emailCheck = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+
+
+
+        if((name == "" || !email.match(emailCheck) || pass == "" || tick.checked == false) && a==0){
+        buttonMoveLeft();
+        a = 1;
+        return false;
+        } 
+
+        if((name == "" || !email.match(emailCheck) || pass == "" || tick.checked == false) && a==1){
+        buttonMoveRight();
+        a = 2;
+        return false;
+        } 
+
+        if((name == "" || !email.match(emailCheck) || pass == "" || tick.checked == false) && a==2){
+        buttonMoveLeft();
+        a = 1;
+        return false;
+        } 
+
+        else{
+
+            // document.getElementById('submit-btn').click();  
+            document.getElementById('submit-btn').style.cursor = 'pointer';
+            return false;
+        };
+
+    };
+
+
+    
+
+    function buttonMoveLeft(){
+
+        const button = document.getElementById('submit-btn');
+        button.style.transform = 'translateX(-400px)';
+        
+
+    };
+
+
+    function buttonMoveRight(){
+
+        const button = document.getElementById('submit-btn');
+        button.style.transform = 'translateX(0%)';
+
+    };
+
+
+    function resetBtn(){
+        const button = document.getElementById('submit-btn');
+        button.style.transform = 'translateX(0%)';
+    };
+
+
+</script>

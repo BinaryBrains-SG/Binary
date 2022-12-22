@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="http://localhost:8000/media/Assets/style2.css">
+    <!-- Bootstrap link cdn ////////////////////////////////////////////////////////// -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<style>
+    /* width */
+    ::-webkit-scrollbar {
+      width: 20px;
+      background-color:transperent;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px transperent; 
+      border-radius: 10px;
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: transperent; 
+      border-radius: 0px;
+     
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: transperent; 
+    }
+    </style>
+
+</head>
+<body style="background-color: aliceblue;">
+    <div class="side-bar">
+        <div class="profile-pic">
+            <img src={{url}} alt="">
+        </div>
+        <h3>{{name}}</h3>
+        <p>Student at Gov.SKSJTI</p>
+    </div>
+    <div class="main-content">
+        <img src="http://localhost:8000/media/images/poster.png" alt="">
+        <h1 > Ranking :</h1>
+        <div style="display: flex;justify-content: space-around;flex-wrap: wrap;align-items: center;" class="rank">
+          {%for i in levels%}
+          <img src="http://localhost:8000/media/images/star.png" alt="">
+          {%endfor%}
+        </div>
+        <h1 style="margin-top: 40px;">Courses :</h1>
+        <div class="courses">
+           
+           <div style="display: flex; justify-content: center;align-items: center;"><a href="http://localhost:8000/courses/c"><img src="http://localhost:8000/media/Courses/c.png" alt=""></a></div>
+           <div><a href="http://localhost:8000/courses/python"><img src="http://localhost:8000/media/Courses/python.jpeg" alt=""></a></div>
+           <div><a href="http://localhost:8000/courses/next"><img src="http://localhost:8000/media/Courses/nextJs.jpeg" alt=""></a></div>
+           <div><a href="http://localhost:8000/courses/react"><img src="http://localhost:8000/media/Courses/react.png" alt=""></a></div>
+           <div><a href="http://localhost:8000/courses/php"><img src="http://localhost:8000/media/Courses/php.png" alt=""></a></div>
+           
+        </div>
+        <h1 style="margin-top: 40px;">Subscription :</h1>
+        <div class="subscription">
+            <div style="overflow: hidden;"><img src="http://localhost:8000/media/images/sub1.png" alt=""></div>
+            <div style="overflow: hidden;"><img src="http://localhost:8000/media/images/sub2.png" alt=""></div>
+            <div style="overflow: hidden;"><img src="http://localhost:8000/media/images/sub3.png" alt=""></div>
+            <div style="overflow: hidden;"><img style="width: 200px;height: 230px;" src="http://localhost:8000/media/images/sub4.png" alt=""></div>
+            
+        </div>
+        <h1 style="margin-top: 40px;">Tests :</h1>
+         <div class="tests">
+             <div><a href="http://localhost:8000/test1"><img src="http://localhost:8000/media/images/test1.png" alt=""></a></div>
+             <div><a href="http://localhost:8000/test2"><img src="http://localhost:8000/media/images/test2.png" alt=""></a></div>
+         </div>
+
+    </div>
+    
+</body>
+</html>
