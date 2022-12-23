@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'BinaryBrains',
         'CLIENT':{
-            'host':'mongodb+srv://gowtham4545:Gowtham123@binarybrains.lyxgcew.mongodb.net/?retryWrites=true&w=majority'
+            'host':DJANGO_MONGO_KEY
         }
     }
 }
