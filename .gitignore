@@ -1,2 +1,9 @@
 .venv
 *CONSTANTS.py
+# Text backup files
+*.bak
+
+# Database
+*.sqlite3
+
+Python
