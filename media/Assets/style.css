@@ -82,7 +82,7 @@ font-family: 'Lato', sans-serif; */
     justify-content: space-around;
     align-items: flex-start;
     margin-top: 100px;
-    background-image: url(images/blob.png);
+    background-image: url('../images/blob.png');
     height: 800px;
     overflow-y: hidden;
     height: 900px;

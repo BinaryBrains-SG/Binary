@@ -36,6 +36,7 @@ def dashboard(request,email):
     data={}
     data['name']=var.name
     data['url']=var.img
+    print(var.img)
     data['levels']=[i for i in range(var.levels)]
     return render(request,'student-dashboard.html',data)
 
