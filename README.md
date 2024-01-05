@@ -1,6 +1,6 @@
 # Binary Brains
 
-#### An educational e-learning web application. The application includes various courses and other features like email automation, community discussion, one-to-one video communication, etc... The tech-stack includes Html, Css, Js, Django and WebRTC.
+#### A web based application that offers an online learning platform for Engineering students. In addition with learning courses, it includes various features like email automation, community doubt resolution system, one-to-one live video mentoring, etc... 
 
 ## Contributors:
 - [`Gowtham`](https://github.com/gowtham4545)
